@@ -441,6 +441,16 @@ namespace N_m3u8DL_CLI.NetCore
                     live.LiveFile = LivePath;
                     live.TimerStart();  //开始录制
                     // Console.ReadKey();
+
+                    try
+                    {
+                        Thread.Sleep(Timeout.Infinite);
+                    }
+                    catch (ThreadAbortException)
+                    {
+                        String name = Thread.CurrentThread.Name;
+                        Console.WriteLine("Thread '{0}' aborted.", name);
+                    }
                 }
 
                 LOGGER.WriteLineError(strings.downloadFailed);
