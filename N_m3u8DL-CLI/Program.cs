@@ -440,7 +440,7 @@ namespace N_m3u8DL_CLI.NetCore
                     live.LiveStream = outputStream;
                     live.LiveFile = LivePath;
                     live.TimerStart();  //开始录制
-                    // Console.ReadKey();
+                    // Console.ReadKey(); 
                 }
 
                 LOGGER.WriteLineError(strings.downloadFailed);
