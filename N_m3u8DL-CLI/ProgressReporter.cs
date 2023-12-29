@@ -31,7 +31,7 @@ namespace N_m3u8DL_CLI
                 var sub = windowWith - 4 - ProgressReporter.progress.Length - ProgressReporter.speed.Length - now.Length;
                 if (sub <= 0) sub = 0;
                 string print = now + " " + ProgressReporter.progress + " " + ProgressReporter.speed + new string(' ', sub);
-                Console.Write("\r" + print + "\r");
+                Console.WriteLine(print);
                 //Console.Write(print);
             }
         }
